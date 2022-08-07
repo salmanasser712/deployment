@@ -136,6 +136,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.FormParser',
+    )
+}
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Default primary key field type
