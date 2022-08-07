@@ -26,7 +26,7 @@ class CustomerView(viewsets.ModelViewSet):
 #@api_view(["POST"])
 def Customerreject(X):
     try:
-        mdl=joblib.load(open("DT_model.pkl", "rb"))
+        mdl=joblib.load(open("MyAPI/DT_model.pkl", "rb"))
         #mydata=request.data
         #X=np.array(list(mydata.values()))
         #X=X.reshape(1,-1)
