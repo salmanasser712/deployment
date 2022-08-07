@@ -17,7 +17,7 @@ import os
 # import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-v$xd+lw-8=qb9_w@koov4$*fu*m@vf7ll!cus#kvq=@yu6o83e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+STATIC_URL = '/static/'
 
 ALLOWED_HOSTS = ['https://dtdeploy.herokuapp.com/','*']
 
@@ -137,8 +138,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
     'DEFAULT_PARSER_CLASSES': (
@@ -147,11 +147,11 @@ REST_FRAMEWORK = {
     )
 }
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
