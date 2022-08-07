@@ -27,12 +27,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-v$xd+lw-8=qb9_w@koov4$*fu*m@vf7ll!cus#kvq=@yu6o83e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 STATIC_URL = '/static/'
 
-ALLOWED_HOSTS = ['https://dtdeploy.herokuapp.com/', ".researchthroughdesign.org"]
+ALLOWED_HOSTS = ['https://dtdeploy.herokuapp.com/']
 
 
 # Application definition
